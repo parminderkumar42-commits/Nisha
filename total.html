@@ -1,0 +1,286 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>SmartBoost — Digital Marketing Services</title>
+  <meta name="description" content="Meta Ads, Social Media Management, SEO — live demo site with color palette picker and shareable contact/service form." />
+  <meta name="author" content="SmartBoost" />
+  <style>
+    :root{
+      --bg:#0f1724; --card:#0b1220; --text:#e6eef8; --muted:#9fb1cc; --accent:#06b6d4;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Inter,ui-sans-serif,system-ui,Segoe UI,Roboto,'Helvetica Neue',Arial;background:linear-gradient(180deg,var(--bg),#071025);color:var(--text);-webkit-font-smoothing:antialiased}
+    .wrap{max-width:1100px;margin:28px auto;padding:24px}
+    header{display:flex;align-items:center;justify-content:space-between;gap:12px}
+    .brand{display:flex;gap:12px;align-items:center}
+    .logo{width:56px;height:56px;border-radius:12px;background:linear-gradient(135deg,var(--accent),#8b5cf6);display:flex;align-items:center;justify-content:center;font-weight:700}
+    h1{margin:0;font-size:22px}
+    p.lead{margin:4px 0 0;color:var(--muted)}
+
+    .grid{display:grid;grid-template-columns:1fr 360px;gap:20px;margin-top:22px}
+    .card{background:rgba(255,255,255,0.03);padding:18px;border-radius:14px;box-shadow:0 6px 18px rgba(2,6,23,0.6)}
+
+    .hero{padding:20px;border-radius:12px}
+    .services{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:14px}
+    .svc{padding:12px;border-radius:10px;background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);min-height:90px}
+    .svc h3{margin:0 0 6px;font-size:15px}
+    .svc p{margin:0;color:var(--muted);font-size:13px}
+
+    .controls{display:flex;flex-direction:column;gap:12px}
+    label{font-size:13px;color:var(--muted)}
+    .palette{display:flex;gap:8px;align-items:center}
+    input[type=color]{width:54px;height:38px;border:none;background:none;padding:0}
+
+    form{display:flex;flex-direction:column;gap:10px}
+    input,textarea,select{padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.06);background:transparent;color:var(--text);outline:none}
+    .row{display:flex;gap:8px}
+    .btn{display:inline-block;padding:10px 14px;border-radius:10px;border:none;background:var(--accent);color:#04202a;font-weight:600;cursor:pointer}
+    .muted{color:var(--muted);font-size:13px}
+
+    .share-row{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+    .copybtn{padding:8px 10px;border-radius:8px;border:1px solid rgba(255,255,255,0.06);background:transparent;color:var(--text);cursor:pointer}
+
+    footer{margin-top:20px;color:var(--muted);font-size:13px;text-align:center}
+
+    @media (max-width:980px){.grid{grid-template-columns:1fr}.services{grid-template-columns:repeat(2,1fr)}}
+    @media (max-width:520px){.services{grid-template-columns:1fr}.logo{width:44px;height:44px}}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand">
+        <div class="logo">SB</div>
+        <div>
+          <h1>SmartBoost — Digital Marketing</h1>
+          <p class="lead">Meta Ads • Social Media Management • SEO — Live demo with interactive palette & shareable forms</p>
+        </div>
+      </div>
+      <div class="muted">Ready to convert — Demo site</div>
+    </header>
+
+    <div class="grid">
+      <main>
+        <section class="card hero">
+          <h2 style="margin:0 0 8px">Grow with targeted Meta Ads & Social Presence</h2>
+          <p class="muted">We run data-backed Meta (Facebook & Instagram) campaigns, manage your social handles, and optimize for SEO. Use the live controls on the right to customize the site's look — and the contact form to generate a shareable service request URL.</p>
+
+          <div class="services" style="margin-top:18px">
+            <div class="svc">
+              <h3>Meta Ads Management</h3>
+              <p>Audience research, creative testing, funnel setup, pixel & conversion tracking.</p>
+            </div>
+            <div class="svc">
+              <h3>Social Media Handles</h3>
+              <p>Content calendar, community growth, influencer outreach, daily posting.</p>
+            </div>
+            <div class="svc">
+              <h3>SEO (On-site & Off-site)</h3>
+              <p>Technical SEO fixes, keyword targeting, backlink strategy, content optimization.</p>
+            </div>
+          </div>
+
+          <hr style="opacity:0.06;margin:18px 0">
+          <h3 style="margin:6px 0">Quick pitch</h3>
+          <p class="muted">We deliver measurable growth: CTR improvements, lower CPA, and better organic reach. Fill the service form to request a free strategy call.</p>
+        </section>
+
+        <section class="card" style="margin-top:12px">
+          <h3 style="margin:0 0 8px">SEO checklist (live tips)</h3>
+          <ul class="muted" style="margin:0;padding-left:18px">
+            <li>Unique title & meta description for each page</li>
+            <li>Structured data for business & local listings</li>
+            <li>Fast load time & mobile-first layout</li>
+            <li>Internal linking and content clusters</li>
+          </ul>
+        </section>
+      </main>
+
+      <aside>
+        <div class="card controls">
+          <div>
+            <label>Theme — adjust live palette</label>
+            <div class="palette" style="margin-top:8px">
+              <div>
+                <div class="muted">Primary</div>
+                <input id="primary" type="color" value="#06b6d4" title="Primary color">
+              </div>
+              <div>
+                <div class="muted">Accent</div>
+                <input id="accent" type="color" value="#8b5cf6" title="Accent color">
+              </div>
+              <div>
+                <div class="muted">Background</div>
+                <input id="bg" type="color" value="#071025" title="Backdrop color">
+              </div>
+            </div>
+            <div style="margin-top:8px" class="muted">Tip: Share your palette using the "Share Palette" button.</div>
+            <div style="margin-top:8px" class="share-row">
+              <button class="btn" id="applyTheme">Apply</button>
+              <button class="copybtn" id="sharePalette">Share Palette</button>
+            </div>
+          </div>
+
+          <hr style="opacity:0.06">
+
+          <div>
+            <label>Request a service / Contact</label>
+            <form id="serviceForm">
+              <input id="name" placeholder="Your full name" required />
+              <input id="email" type="email" placeholder="Email" required />
+              <input id="phone" placeholder="Phone (optional)" />
+              <select id="service">
+                <option value="meta-ads">Meta Ads Management</option>
+                <option value="social-handles">Social Media Management</option>
+                <option value="seo">SEO Services</option>
+                <option value="full">Full Growth Package</option>
+              </select>
+              <textarea id="details" rows="3" placeholder="Brief details / budget / timeline"></textarea>
+
+              <div class="row">
+                <button class="btn" type="button" id="generateLink">Generate Shareable Link</button>
+                <button class="copybtn" type="button" id="copyAsMail">Prepare Mail</button>
+              </div>
+
+              <div class="share-row" style="margin-top:8px">
+                <input id="shareUrl" readonly style="flex:1;padding:8px;border-radius:8px;background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.04)">
+                <button class="copybtn" id="copyUrl" type="button">Copy</button>
+              </div>
+              <div class="muted" style="font-size:12px">You can paste the generated URL anywhere — it will prefill the form when opened.</div>
+            </form>
+          </div>
+
+          <hr style="opacity:0.06">
+
+          <div>
+            <label>Quick contact & share</label>
+            <div style="display:flex;gap:8px;margin-top:8px">
+              <button class="btn" id="downloadVcard">Download vCard</button>
+              <button class="copybtn" id="copyContact">Copy Contact</button>
+            </div>
+            <div style="margin-top:8px" class="muted">Share via phone apps (if supported) using your device's share menu.</div>
+            <div style="display:flex;gap:8px;margin-top:8px">
+              <a class="copybtn" href="https://www.facebook.com" target="_blank">Facebook</a>
+              <a class="copybtn" href="https://www.instagram.com" target="_blank">Instagram</a>
+              <a class="copybtn" href="https://www.linkedin.com" target="_blank">LinkedIn</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="card muted" style="margin-top:12px;font-size:13px">
+          <strong>How the shareable link works</strong>
+          <p class="muted">When you click "Generate Shareable Link" the form values are encoded into the URL. Anyone who opens it will see the prefilled form — great for onboarding clients or collecting requests in chat.</p>
+        </div>
+      </aside>
+    </div>
+
+    <footer>
+      Built with ❤️ — export this single file as <code>index.html</code> and host on GitHub Pages, Netlify, or Vercel.
+    </footer>
+  </div>
+
+  <script>
+    // Theme controls
+    const primary = document.getElementById('primary');
+    const accent = document.getElementById('accent');
+    const bg = document.getElementById('bg');
+    const apply = document.getElementById('applyTheme');
+    const sharePalette = document.getElementById('sharePalette');
+
+    function applyThemeVals() {
+      const p = primary.value;
+      const a = accent.value;
+      const b = bg.value;
+      document.documentElement.style.setProperty('--accent', p);
+      // subtle gradient
+      document.querySelector('.logo').style.background = `linear-gradient(135deg,${p},${a})`;
+      document.documentElement.style.setProperty('--bg', b);
+    }
+    apply.addEventListener('click', ()=>{applyThemeVals();alert('Theme applied live — use "Share Palette" to copy a URL with these colors.')});
+    sharePalette.addEventListener('click', ()=>{
+      const url = new URL(location.href);
+      url.searchParams.set('palette', JSON.stringify({primary:primary.value,accent:accent.value,bg:bg.value}));
+      navigator.clipboard.writeText(url.toString()).then(()=>alert('Palette link copied to clipboard'))
+    });
+
+    // form shareable link
+    const form = document.getElementById('serviceForm');
+    const generate = document.getElementById('generateLink');
+    const shareUrl = document.getElementById('shareUrl');
+    const copyUrl = document.getElementById('copyUrl');
+    const copyAsMail = document.getElementById('copyAsMail');
+
+    function serializeForm(){
+      return {
+        name:document.getElementById('name').value,
+        email:document.getElementById('email').value,
+        phone:document.getElementById('phone').value,
+        service:document.getElementById('service').value,
+        details:document.getElementById('details').value
+      }
+    }
+
+    generate.addEventListener('click', ()=>{
+      const data = serializeForm();
+      const url = new URL(location.href.split('#')[0]);
+      url.searchParams.set('req', btoa(unescape(encodeURIComponent(JSON.stringify(data)))));
+      shareUrl.value = url.toString();
+      navigator.clipboard.writeText(shareUrl.value).catch(()=>{});
+    });
+
+    copyUrl.addEventListener('click', ()=>{if(shareUrl.value){navigator.clipboard.writeText(shareUrl.value);alert('Link copied')}else{alert('Generate a link first')}});
+
+    copyAsMail.addEventListener('click', ()=>{
+      const d = serializeForm();
+      const subject = encodeURIComponent('Service request: '+d.service);
+      const body = encodeURIComponent(`Name: ${d.name}\nEmail: ${d.email}\nPhone: ${d.phone}\nService: ${d.service}\nDetails: ${d.details}`);
+      const mail = `mailto:${d.email}?subject=${subject}&body=${body}`;
+      // open mail client
+      window.location.href = mail;
+    });
+
+    // On load: check URL for prefill
+    (function prefillFromUrl(){
+      const params = new URLSearchParams(location.search);
+      if(params.has('req')){
+        try{
+          const raw = decodeURIComponent(escape(atob(params.get('req'))));
+          const obj = JSON.parse(raw);
+          document.getElementById('name').value = obj.name||'';
+          document.getElementById('email').value = obj.email||'';
+          document.getElementById('phone').value = obj.phone||'';
+          document.getElementById('service').value = obj.service||'meta-ads';
+          document.getElementById('details').value = obj.details||'';
+        }catch(e){console.warn('Invalid request param')}
+      }
+      if(params.has('palette')){
+        try{
+          const p = JSON.parse(params.get('palette'));
+          primary.value = p.primary||primary.value;
+          accent.value = p.accent||accent.value;
+          bg.value = p.bg||bg.value;
+          applyThemeVals();
+        }catch(e){console.warn('bad palette')}
+      }
+    })();
+
+    // vCard download
+    document.getElementById('downloadVcard').addEventListener('click', ()=>{
+      const name = 'SmartBoost Team';
+      const tel = '+91-1234567890';
+      const email = 'hello@smartboost.example';
+      const vcard = `BEGIN:VCARD\nVERSION:3.0\nFN:${name}\nORG:SmartBoost\nTEL:${tel}\nEMAIL:${email}\nEND:VCARD`;
+      const blob = new Blob([vcard],{type:'text/vcard'});
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a'); a.href = url; a.download = 'smartboost.vcf'; document.body.appendChild(a); a.click(); a.remove();
+    });
+
+    document.getElementById('copyContact').addEventListener('click', ()=>{
+      const txt = 'SmartBoost — Meta Ads & Social • hello@smartboost.example • +91-1234567890';
+      navigator.clipboard.writeText(txt).then(()=>alert('Contact copied'))
+    });
+  </script>
+</body>
+</html>
